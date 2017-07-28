@@ -1,2 +1,2 @@
 # hex-map
-Browser-based hexagonal map generator, for use in a tabletop RPG setting like Traveller.
+Browser-based hexagonal map generator for your sci-fi RPG tabletop needs.
