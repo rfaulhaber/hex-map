@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <HexMap width="800" height="800"/>
+                <HexMap width={window.innerWidth} height={window.innerHeight}/>
             </div>
         );
     }

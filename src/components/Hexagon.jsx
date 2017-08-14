@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {RegularPolygon} from 'react-konva';
 
+const radius = 30;
+
 export default class Hexagon extends Component {
     render() {
+        console.log('x', this.props.x, 'y', this.props.y);
         return (
-            <RegularPolygon x={this.props.x} y={this.props.y} sides="6" radius="30" stroke="black"
+            <RegularPolygon x={this.props.x} y={this.props.y} sides="6" radius={radius} stroke="black"
                             rotation="30"/>
         );
     }
@@ -16,14 +19,12 @@ export function hexToPixel(q, r) {
     const x = (f0 * q + f1 * r) * Layout.size.x;
     const y = (f2 * q + f3 * r) * Layout.size.y;
 
-    console.log(q, r);
-
     return point(x + Layout.origin.x, y + Layout.origin.y);
 }
 
 const Layout = {
-    size: point(30, 30),
-    origin: point(200, 200)
+    size: point(radius, radius),
+    origin: point(Math.floor(window.innerWidth / 2), Math.floor(window.innerHeight / 2))
 };
 
 const layoutFlat = [
