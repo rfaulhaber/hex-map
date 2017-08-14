@@ -5,7 +5,6 @@ const radius = 30;
 
 export default class Hexagon extends Component {
     render() {
-        console.log('x', this.props.x, 'y', this.props.y);
         return (
             <RegularPolygon x={this.props.x} y={this.props.y} sides="6" radius={radius} stroke="black"
                             rotation="30"/>
@@ -24,7 +23,7 @@ export function hexToPixel(q, r) {
 
 const Layout = {
     size: point(radius, radius),
-    origin: point(Math.floor(window.innerWidth / 2), Math.floor(window.innerHeight / 2))
+    origin: point(30, 30)
 };
 
 const layoutFlat = [
